@@ -21,11 +21,15 @@ class Solution(object):
 
 if __name__ == "__main__":
     solution = Solution()
+
     test_array = [1, 2, 3, 4, 9, 5, 6, 7, 0]
-    print(solution.sort(test_array))
+    print('array is: ' + str(test_array))
+    print('sorted array: ' + str(solution.sort(test_array)) + '\n')
 
     test_array = []
-    print(solution.sort(test_array))
+    print('array is: ' + str(test_array))
+    print('sorted array: ' + str(solution.sort(test_array)) + '\n')
 
     test_array = None
-    print(solution.sort(test_array))
+    print('array is: ' + str(test_array))
+    print('sorted array: ' + str(solution.sort(test_array)) + '\n')

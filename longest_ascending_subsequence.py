@@ -26,5 +26,11 @@ class Solution(object):
 
 if __name__ == "__main__":
     example = Solution()
+
     test = [1, 2, 3, 4, -1, 7, 8, 0]
-    print(example.longest(test))
+    print('array is: ' + str(test))
+    print('the length of longest subsequences: ' + str(example.longest(test)) + '\n')
+
+    test = [5, 7, 4, -3, 9, 1, 10, 4, 5, 8, 9, 3]
+    print('array is: ' + str(test))
+    print('the length of longest subsequences: ' + str(example.longest(test)) + '\n')
