@@ -11,7 +11,7 @@ class Solution(object):
         #table = [[0] * len(target)] * len(source) # all rows will change at the same time, bug
         table = []
         for i in range(len(source)):
-            table.append([0] * len(target))
+            table.append([0]*len(target))
 
         for i in range(len(source)):
             for j in range(len(target)):
@@ -35,6 +35,26 @@ class Solution(object):
                             table[i][j] = table[i-1][j-1] + 1
                         else:
                             table[i][j] = max(table[i-1][j], table[i][j-1])
+        print(table)
+
+        return max(max(table))
+
+    def longest_2(self, source, target):
+        """
+        input: string source, string target
+        return: int
+        """
+        #table = [[0] * len(target)] * len(source) # all rows will change at the same time, bug
+        table = []
+        for i in range(len(source)+1):
+            table.append([0]*(len(target)+1))
+
+        for i in range(len(source)):
+            for j in range(len(target)):
+                if source[i] == target[j]:
+                    table[i+1][j+1] = table[i][j] + 1
+                else:
+                    table[i+1][j+1] = max(table[i][j+1], table[i+1][j])
         # print(table)
 
         return max(max(table))
