@@ -57,7 +57,9 @@ class Solution(object):
                     table[i+1][j+1] = max(table[i][j+1], table[i+1][j])
         # print(table)
 
-        return max(max(table))
+        # return max(max(table)) # bug can't use this to find the max element in 2d array
+
+        return max(max(item) for item in table)
 
 
 if __name__ == "__main__":
