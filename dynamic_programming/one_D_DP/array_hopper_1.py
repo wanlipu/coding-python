@@ -26,16 +26,16 @@ if __name__ == "__main__":
     example = Solution()
 
     source = [0, 1, 2, 3]
-    print('the length of Palindrome substring: ' + str(example.canJump(source)) + '\n')
+    print('can jump to the end of the array: ' + str(example.canJump(source)) + '\n')
 
     source = [1, 1, 1, 1, 1]
-    print('the length of Palindrome substring: ' + str(example.canJump(source)) + '\n')
+    print('can jump to the end of the array: ' + str(example.canJump(source)) + '\n')
 
     source = [1, 2, 1, 1, 0, 1]
-    print('the length of Palindrome substring: ' + str(example.canJump(source)) + '\n')
+    print('can jump to the end of the array: ' + str(example.canJump(source)) + '\n')
 
     source = [100, 0, 0, 0, 0, 0, 0]
-    print('the length of Palindrome substring: ' + str(example.canJump(source)) + '\n')
+    print('can jump to the end of the array: ' + str(example.canJump(source)) + '\n')
 
     source = [0]
-    print('the length of Palindrome substring: ' + str(example.canJump(source)) + '\n')
+    print('can jump to the end of the array: ' + str(example.canJump(source)) + '\n')
