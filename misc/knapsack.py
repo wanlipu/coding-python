@@ -30,6 +30,38 @@ class Solution(object):
 
         return table[limit][len(values)]
 
+    def knapsack2(self, values, weights, limit):
+        """
+        input: string source, string target
+        return: int
+        """
+        # write your solution here
+        if len(values) == 0 or len(weights) == 0:
+            return 0
+
+        #table = [[0] * len(target)] * len(source) # all rows will change at the same time, bug
+        table = []
+        for i in range(limit+1):
+            table.append([0]*(len(values)+1))
+
+
+
+        for i in range(len(values)+1):
+            for max_weights in range(limit + 1):
+                if max_weights == 0:
+                    table[max_weights][i] = 0
+                else:
+                    if i == 0:
+                        table[max_weights][i] = 0
+                    else:
+                        if weights[i-1] > max_weights:
+                            table[max_weights][i] = table[max_weights][i-1]
+                        else:
+                            table[max_weights][i] = max(table[max_weights-weights[i-1]][i-1]+values[i-1], table[max_weights][i-1])
+        # print(table)
+
+        return table[limit][len(values)]
+
 if __name__ == "__main__":
     import numpy as np
     example = Solution()
@@ -48,5 +80,6 @@ if __name__ == "__main__":
     limit = 165
     print('solution is: '+ str(result))
     print('the largest values: ' + str(example.knapsack(values, weights, limit)) + '\n')
+    print('the largest values: ' + str(example.knapsack2(values, weights, limit)) + '\n')
 
 
