@@ -39,6 +39,8 @@ if __name__ == "__main__":
     limit = 20
     print('the largest values: ' + str(example.knapsack(values, weights, limit)) + '\n')
 
+
+    # some example are from https://people.sc.fsu.edu/~jburkardt/datasets/knapsack_01/knapsack_01.html
     values = [92, 57, 49, 68, 60, 43, 67, 84, 87, 72]
     weights = [23, 31, 29, 44, 53, 38, 63, 85, 89, 82]
     solution_table = [1, 1, 1, 1, 0, 1, 0, 0, 0, 0]
