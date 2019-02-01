@@ -26,3 +26,11 @@ if __name__ == "__main__":
     source = 'abc'
     target = 'abc'
     print('the length of longest string: ' + str(example.longestCommon(source, target)) + '\n')
+
+    source = 'abcaaaaaaaaaaaaaaaaaaaaaaaad'
+    target = 'abcccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaad'
+    print('the length of longest string: ' + str(example.longestCommon(source, target)) + '\n')
+
+    source = 'abcaaaaaaaaaaaaaaaaaaaaaaaaddddddd'
+    target = 'abcccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadddddddd'
+    print('the length of longest string: ' + str(example.longestCommon(source, target)) + '\n')
