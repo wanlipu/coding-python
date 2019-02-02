@@ -39,6 +39,41 @@ class Solution:
         else:
             return min_num
 
+    def coinChange2(self, coins, amount):
+        """
+        :type coins: List[int]
+        :type amount: int
+        :rtype: int
+        """
+        if not coins:
+            return -1
+
+        length = len(coins)
+
+        if length == 0:
+            return -1
+        # if length == 1:
+        #     if coins[0] == amount:
+        #         return 1
+        #     else:
+        #         return -1
+
+        dp = [float('inf')] * (amount + 1)
+
+        dp[0] = 0
+
+        for value in range(1, amount + 1):
+            for i in range(length):
+                if coins[i] <= value and dp[value] > dp[value-coins[i]]+1:
+                    dp[value] = dp[value-coins[i]]+1
+
+        # print dp
+        min_num = dp[-1]
+        if min_num == float('inf'):
+            return -1
+        else:
+            return min_num
+
 
 if __name__ == "__main__":
     example = Solution()
@@ -55,5 +90,6 @@ if __name__ == "__main__":
     result = 17
     print('expected num : ' + str(result))
     print('min num to make the change is : ' + str(example.coinChange(coins, target)) + '\n')
+    print('min num to make the change is : ' + str(example.coinChange2(coins, target)) + '\n')
 
 
