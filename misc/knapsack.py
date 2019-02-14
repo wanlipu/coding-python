@@ -79,7 +79,24 @@ if __name__ == "__main__":
     result = sum(np.array(values) * np.array(solution_table))
     limit = 165
     print('solution is: '+ str(result))
-    print('the largest values: ' + str(example.knapsack(values, weights, limit)) + '\n')
+    print('the largest values: ' + str(example.knapsack(values, weights, limit)))
     print('the largest values: ' + str(example.knapsack2(values, weights, limit)) + '\n')
 
+    values = [24, 13, 23, 15, 16]
+    weights = [12, 7, 11, 8, 9]
+    solution_table = [0, 1, 1, 1, 0]
+    result = sum(np.array(values) * np.array(solution_table))
+    limit = 26
+    print('solution is: '+ str(result))
+    print('the largest values: ' + str(example.knapsack(values, weights, limit)))
+    print('the largest values: ' + str(example.knapsack2(values, weights, limit)) + '\n')
+
+    values = [50, 50, 64, 46, 50, 5]
+    weights = [56, 59, 80, 64, 75, 17]
+    solution_table = [1, 1, 0, 0, 1, 0]
+    result = sum(np.array(values) * np.array(solution_table))
+    limit = 190
+    print('solution is: '+ str(result))
+    print('the largest values: ' + str(example.knapsack(values, weights, limit)))
+    print('the largest values: ' + str(example.knapsack2(values, weights, limit)) + '\n')
 
