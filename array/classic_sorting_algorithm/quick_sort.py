@@ -45,3 +45,16 @@ if __name__ == "__main__":
     test_array = None
     print('array is: ' + str(test_array))
     print('sorted array: ' + str(solution.quickSort(test_array)) + '\n')
+
+
+    test_array = [1, 1, 2, 2, 1, 1, 2, 2, 1]
+    print('array is: ' + str(test_array))
+    print('sorted array: ' + str(solution.quickSort(test_array)) + '\n')
+
+    test_array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    print('array is: ' + str(test_array))
+    print('sorted array: ' + str(solution.quickSort(test_array)) + '\n')
+
+    test_array = [1, 1, 1, 1, 1, 1, 1, 1, 1]
+    print('array is: ' + str(test_array))
+    print('sorted array: ' + str(solution.quickSort(test_array)) + '\n')
